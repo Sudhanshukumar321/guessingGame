@@ -20,7 +20,7 @@ const selectWord = () =>{
     // console.log(Math.floor(randomIndex));
     const realWord = data[randomIndex];
 
-    return realWord;
+    return realWord.toLowerCase();
 }
 
 const suffelingTheWord = (arrOfRealWord) =>{
@@ -45,7 +45,7 @@ const start = () =>{
         result.style.fontSize = "30px";
 
     }else{
-        let userWord = input.value;
+        let userWord = input.value..toLowerCase();
         
         if(userWord===''){
             alert('Please type any word in input box');
