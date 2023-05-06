@@ -54,14 +54,14 @@ const start = () =>{
             play=false;
             if(userWord === arrOfRealWord){
                 // play=false;
-                result.innerHTML= ` ✅congratulation, you are guessed right`;
+                result.innerHTML= ` ✅ congratulation, you are guessed right`;
                 result.style.color="green" ; 
                 button.innerHTML='Restart';
                 input.classList.toggle('hidden');
                 input.value='';
             }else{
                 // play=false;
-                result.innerHTML= `sorry, you are guessed Wrong❎`; 
+                result.innerHTML= `❎ sorry, you are guessed Wrong`; 
                 button.innerHTML='Restart';
                 input.classList.toggle('hidden');
                 input.value='';
