@@ -24,12 +24,10 @@ const selectWord = () =>{
     let randomIndex = Math.floor(Math.random()*data.length);
     // console.log(Math.floor(randomIndex));
     const realWord = data[randomIndex];
-
     return realWord.toUpperCase();
 }
 
-const suffelingTheWord = (arrOfRealWord) =>{
-    
+const suffelingTheWord = (arrOfRealWord) =>{   
     for(let i=arrOfRealWord.length-1;i>0;i--){
         let letter = arrOfRealWord[i];
         let tempRandomIndex = Math.floor(Math.random()*(i+1));
