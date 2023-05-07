@@ -39,15 +39,11 @@ const suffelingTheWord = (arrOfRealWord) =>{
     return arrOfRealWord;
 }
 
-const confetti = ()=>{
-    
-}
 
 const start = () =>{
     
     if(!play){
         play=true;
-        
         button.innerHTML="Guess"
         input.classList.toggle('hidden');
         arrOfRealWord = selectWord();
@@ -67,8 +63,6 @@ const start = () =>{
             if(userWord === arrOfRealWord){
                 //play audio
                 right.play();
-                startConfetti();
-                confetti();
                 result.innerHTML= ` ✔️ congratulation, you are guessed right`;
                 result.style.color="green" ; 
                 
@@ -79,6 +73,7 @@ const start = () =>{
                     right.load();
                     button.innerHTML='Restart';
                 },3000)
+                
             }else{
                 // play audio
                 wrong.play();
