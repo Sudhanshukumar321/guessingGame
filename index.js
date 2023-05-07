@@ -1,7 +1,12 @@
 let result = document.querySelector('.result');
 let input = document.querySelector('input');
-let button = document.querySelector('.btn');
+let button = document.querySelector('.button');
 let container = document.querySelector('.container');
+
+//audio 
+let right = new Audio('./data/right.mp3');
+let wrong = new Audio('./data/wrong.mp3');
+let click = new Audio('./data/click.wav');
 
 const data =['css','python','java','hindi','sanskrit','math',
 'english','javascript','react','nextjs'];
@@ -34,9 +39,15 @@ const suffelingTheWord = (arrOfRealWord) =>{
     return arrOfRealWord;
 }
 
+const confetti = ()=>{
+    
+}
+
 const start = () =>{
+    
     if(!play){
         play=true;
+        
         button.innerHTML="Guess"
         input.classList.toggle('hidden');
         arrOfRealWord = selectWord();
@@ -48,20 +59,34 @@ const start = () =>{
         let userWord = input.value.toUpperCase();
         
         if(userWord===''){
+            click.play();
             alert('Please type any word in input box');
         }
         else{
             play=false;
             if(userWord === arrOfRealWord){
-                // play=false;
-                result.innerHTML= ` ✅ congratulation, you are guessed right`;
+                //play audio
+                right.play();
+                startConfetti();
+                confetti();
+                result.innerHTML= ` ✔️ congratulation, you are guessed right`;
                 result.style.color="green" ; 
-                button.innerHTML='Restart';
+                
                 input.classList.toggle('hidden');
                 input.value='';
+                setTimeout(()=>{
+                    right.pause();
+                    right.load();
+                    button.innerHTML='Restart';
+                },3000)
             }else{
-                // play=false;
-                result.innerHTML= `❎ sorry, you are guessed Wrong`; 
+                // play audio
+                wrong.play();
+                result.innerHTML= `❌ sorry, you are guessed Wrong`; 
+                setTimeout(()=>{
+                    wrong.pause();
+                    wrong.load();
+                },2000)
                 button.innerHTML='Restart';
                 input.classList.toggle('hidden');
                 input.value='';
@@ -72,4 +97,3 @@ const start = () =>{
 }
 
 button.addEventListener('click',start);
-
