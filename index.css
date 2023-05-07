@@ -80,7 +80,7 @@ input:focus{
 .hidden{
     display: none;
 }
-.btn{
+.button{
     padding: 8px 20px;
     border-radius: 5px;
     border: transparent;
@@ -93,13 +93,13 @@ input:focus{
     margin: auto;
 }
 
- .btn:focus{
+ .button:focus{
     font-size: 1.3rem;
-    background-color: green;
+    /* background-color: green; */
     box-shadow: 1px 1px 3px white;
 }
 
-.btn:hover{
+.button:hover{
     background-color: red;
 }
 
