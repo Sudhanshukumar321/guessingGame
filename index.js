@@ -3,6 +3,7 @@ let input = document.querySelector('input');
 let button = document.querySelector('.button');
 let container = document.querySelector('.container');
 
+
 //audio 
 let right = new Audio('./data/right.mp3');
 let wrong = new Audio('./data/wrong.mp3');
@@ -61,6 +62,7 @@ const start = () =>{
         else{
             play=false;
             if(userWord === arrOfRealWord){
+                startConfetti();
                 //play audio
                 right.play();
                 result.innerHTML= ` ✔️ congratulation, you are guessed right`;
@@ -72,6 +74,7 @@ const start = () =>{
                     right.pause();
                     right.load();
                     button.innerHTML='Restart';
+                    stopConfetti();
                 },3000)
                 
             }else{
