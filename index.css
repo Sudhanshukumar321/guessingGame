@@ -9,7 +9,6 @@
 .letters{
     text-shadow: 2px 2px 2px black;
     font-weight: bolder;
-    
 }
 .main{
     background: url('./data/background.jpg');
@@ -21,8 +20,8 @@
     padding: 10px;
     color: red;
     background-color: rgba(219, 175, 182, 0.787);
-    letter-spacing: 0.3rem;
-    word-spacing: 0.3rem;
+    letter-spacing: 0.3em;
+    word-spacing: 0.3em;
     display: flex;
     align-items: center;
     justify-content: center; 
@@ -39,8 +38,8 @@
 }
 
 .container{
-    height: 50%;
-    width: 50%;
+    height: 70%;
+    width: 45%;
     font-weight: bolder;
     background-color: rgba(219, 175, 182, 0.84);
     display: flex;
@@ -59,9 +58,9 @@ h3{
 }
 input{
     width: 50%;
-    margin: 1.5rem 0;
-    font-size: 1rem;
-    padding: 1rem 2em;
+    margin: 1.5em 0;
+    font-size: 1em;
+    padding: 18px 3px;
     text-align: center;
     outline: none;
     border: 1px solid rgba(0, 0, 0, 0.414);
@@ -72,9 +71,8 @@ input{
 }
 
 input:focus{
-    width: 55%;
-    padding: 1.5rem 3em;
-    margin: 2rem;
+    padding: 20px;
+    margin: 2em;
     /* box-shadow: inset 0px 1px 5px rgba(0,0,0,0.01), 
     0px 0px 15px rgba(0,0,0,0.2); */
 }
@@ -87,11 +85,11 @@ input:focus{
     border-radius: 5px;
     border: transparent;
     font-weight:500;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.2em;
     color: white;
     background-color: blue;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1em;
     margin: auto;
 }
 
@@ -127,24 +125,26 @@ input:focus{
 }
 
 .copyright{
-    width: 25%;
+    width: 20%;
     padding: 10px;
     margin: 10px;
 }
 
 .about{
-    width: 25%;
+    width: 30%;
     color: white;
     margin: 0 10px;
 }
 
+.mobile{
+    margin-left: 20px;
+}
+.email{
+    margin-left: 20px;
+}
 a{
     text-decoration: none;
     color: white;
-}
-
-.mobile{
-    margin-bottom:10px;
 }
 
 .name{
@@ -158,11 +158,111 @@ a{
     text-shadow: 1px 1px 2px red;
 }
 
-/* customize confetti style */
 #confetti-canvas{
 position: fixed;
 top: 0;
 left: 0;
 width: 100%;
 height: 100%;
+}
+
+@media(width<=480px){
+    .footer{
+        height: 12vh;
+    }
+    .name{
+        width: auto;
+    }
+    .name h1{
+         display: none;
+    }
+    .about{
+        width: auto;
+    }
+    .about .mobile{
+        margin: 0;
+    }
+    .email{
+        margin: 0;
+    }
+    .copyright{
+        margin-right: 5px;
+        padding:0;
+    }
+    .section{
+        height: 78vh;
+    }
+
+    .container{
+        height: 50%;
+        width: auto;
+    }
+    input{
+        width: 70%;
+        margin-top: 35px;
+    }
+    input:hover{
+        width: 80%;
+    }
+    .result{
+        margin: 10px;
+    }
+    .button{
+        width: 70%;
+        padding: 15px 0;
+        letter-spacing: 0;
+    }
+
+    .heading{
+        font-size: 50px;
+        letter-spacing: 0;
+    }
+}
+
+@media(width>=500px) and (width<=800px){
+    .footer{
+        height: 10vh;
+    }
+    .name{
+        width: auto;
+    }
+    .name h1{
+        letter-spacing: 0;
+        font-size: 15px;
+    }
+    .about{
+        width: auto;
+    }
+    .about .mobile{
+        margin: 0;
+    }
+    .email{
+        margin: 0;
+    }
+    .copyright{
+        margin-right: 5px;
+        padding:0;
+    }
+    .section{
+        height: 80vh;
+    }
+
+    input{
+        width: 80%;
+        margin-top: 35px;
+    }
+    .result{
+        margin: 10px;
+    }
+    .button{
+        width: auto;
+        padding: 5px;
+        margin-bottom: 15px;
+        letter-spacing: 0;
+    }
+
+    .heading{
+        font-size: 50px;
+        letter-spacing: 0;
+    }
 }
