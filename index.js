@@ -42,7 +42,9 @@ const suffelingTheWord = (arrOfRealWord) =>{
 
 
 const start = () =>{
-    
+    container.style.height="auto";
+    button.style.fontSize='25px';
+
     if(!play){
         play=true;
         button.innerHTML="Guess"
@@ -52,6 +54,7 @@ const start = () =>{
         result.innerHTML=`Guess The Correct Word: ${wrongWord}` ;
         result.style.fontSize = "30px";
         result.style.color="red" ;
+        result.style.textAlign="center" ;
     }else{
         let userWord = input.value.toUpperCase();
         
@@ -94,5 +97,5 @@ const start = () =>{
         
     }
 }
-
+container.style.height="auto%";
 button.addEventListener('click',start);
