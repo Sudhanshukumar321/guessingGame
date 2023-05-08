@@ -62,21 +62,22 @@ const start = () =>{
         else{
             play=false;
             if(userWord === arrOfRealWord){
+                //confetti call
                 startConfetti();
                 //play audio
                 right.play();
                 result.innerHTML= ` ✔️ congratulation, you are guessed right`;
                 result.style.color="green" ; 
-                
                 input.classList.toggle('hidden');
                 input.value='';
+                button.innerHTML='wow';
                 setTimeout(()=>{
                     right.pause();
                     right.load();
-                    button.innerHTML='Restart';
+                    //confetti stop
                     stopConfetti();
                 },3000)
-                
+                button.innerHTML='Restart';
             }else{
                 // play audio
                 wrong.play();
