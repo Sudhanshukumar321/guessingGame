@@ -1,0 +1,93 @@
+.profile{
+     height: 50px;
+     width: auto;
+     margin-right: 5px;
+     border-radius: 50%;
+     /* border: 1px solid white;
+     box-shadow: 1px 1px 1px black; */
+     cursor: pointer;
+     z-index: 100000;
+}
+
+.profile:hover{
+    border: 1px solid white;
+    box-shadow: 1px 1px 1px black;
+}
+.outerImage{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.profileHidden{
+    display: none;
+}
+
+.innerImage{
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.innerImage:hover{
+    box-shadow: 1px 1px 3px black;
+}
+.image{
+        
+    display: flex;
+    align-items: center;
+}
+.image h2{
+    font-size: 15px;
+    margin-left: 20px;
+}
+.details{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    flex-direction: column;
+}
+.signout{
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+.signout:hover{
+    background-color: wheat;
+    cursor: pointer;
+    color: red;
+}
+
+@media (width>=1000px){
+    .profileData{
+        padding: 20px;
+        width: 40%;
+        background: linear-gradient(rgb(0, 136, 255),rgba(255, 0, 242, 0.96),pink);
+        height: 350px;
+        font-size: larger;
+        border-radius: 10px;
+        color: wheat;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        position: absolute;
+        top: 10vh;
+        right: 20px;
+    }    
+}
+
+@media (width<1000px) {
+.profileData{
+    padding: 20px;
+    width: 80%;
+    background:linear-gradient(rgb(0, 136, 255),rgba(255, 0, 242, 0.96),pink);
+    height: 350px;
+    color: wheat;
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10vh;
+}
+}
