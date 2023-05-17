@@ -1,60 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./welcome.css">
-    <link rel="stylesheet" href="../navbar/navbar.css">
-    <link rel="stylesheet" href="../profileicon/profile.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./welcome.css" />
+    <link rel="stylesheet" href="../navbar/navbar.css" />
+    <link rel="stylesheet" href="../profileicon/profile.css" />
     <title>Guesing Game</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="main">
-        <header>
-            <h1 class="heading letters"><a class="menu">☰</a><marquee class="scrolling" scrollamount="15">Welcome To Word Guessing Game</marquee>
-                <div class="profile"><img src="../data/profile.jpg" alt="" srcset="" class="outerImage"></div>
-            </h1>
-            
-            <nav class="navbar nav-hide">
-                <a href="#" class="navlink nav-about">About</a>
-                <!-- <a href="#" class="navlink login">Login</a> -->
-                <!-- <a class="navlink sign_up"> sign up </a> -->
-            </nav>
-            <!-- profile icon -->
-            <div class="mainProfileDiv profileHidden">
-                <div class="profileData ">
-                    <div class="image">
-                        <img src="../data/profile.jpg" alt="" class="innerImage">
-                        <h2>SUDHANSHU KUMAR<br/>
-                            sudhanshukush321@gmail.com
-                        </h2>
-                    </div>
-                    <div class="details">
-                        <p class="highestScore">Highest Score: 1200</p>
-                        <div class="signout">Sign out</div>
-                    </div>
-                </div>
+      <header>
+        <h1 class="heading letters">
+          <a class="menu">☰</a
+          ><marquee class="scrolling" scrollamount="15"
+            >Welcome To Word Guessing Game</marquee
+          >
+          <div class="profile">
+            <img
+              src="../data/profile.jpg"
+              alt=""
+              srcset=""
+              class="outerImage"
+            />
+          </div>
+        </h1>
+
+        <nav class="navbar nav-hide">
+          <a href="#" class="navlink nav-about">About</a>
+          <!-- <a href="#" class="navlink login">Login</a> -->
+          <!-- <a class="navlink sign_up"> sign up </a> -->
+        </nav>
+        <!-- profile icon -->
+        <div class="mainProfileDiv profileHidden">
+          <div class="profileData">
+            <div class="image">
+              <img src="../data/profile.jpg" alt="" class="innerImage" />
+              <h2>
+                SUDHANSHU KUMAR<br />
+                sudhanshukush321@gmail.com
+              </h2>
             </div>
-        </header>
-        <section class="section">
-            <div class="container">
-                <h3 class="result letters"> 👇</h3>
-                <input type="text" class='hidden input-game' placeholder="Type the right word" />
-                <button class="button">Click To Start The Game</button>
+            <div class="details">
+              <p class="highestScore">Highest Score: 1200</p>
+              <div class="signout">Sign out</div>
             </div>
-        </section>
-        <footer class="footer">
-            <div class="about">
-                <span style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;">Contact us:</span><br>
-                <span class="mobile"><span style="background-color: rgb(106, 45, 164); border-radius: 50%;padding-bottom: 1px;" >☎️</span> +91 7739058330 </span><br>
-                <span class="email"><span style="background-color: rgb(106, 45, 164); border-radius: 50%; padding-bottom: 1px;">📧</span> <a href="mailto:sudhanshukush321@gmail.com">sudhanshukush321@gmail.com</a></span>
-            </div>
-            <div class="author"><h1>SUDHANSHU KUMAR</h1></div>
-            <div class="footerContent">
-                <p class="copyright"> ©️copyright </p>
-            </div>
-        </footer>
+          </div>
+        </div>
+      </header>
+      <section class="section">
+        <div class="container">
+          <h3 class="result letters">👇</h3>
+          <input
+            type="text"
+            class="hidden input-game"
+            placeholder="Type the right word"
+          />
+          <button class="button">Click To Start The Game</button>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="about">
+          <span
+            style="
+              font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+                sans-serif;
+            "
+            >Contact us:</span
+          ><br />
+          <span class="mobile"
+            ><span
+              style="
+                background-color: rgb(106, 45, 164);
+                border-radius: 50%;
+                padding-bottom: 1px;
+              "
+              >☎️</span
+            >
+            +91 7739058330 </span
+          ><br />
+          <span class="email"
+            ><span
+              style="
+                background-color: rgb(106, 45, 164);
+                border-radius: 50%;
+                padding-bottom: 1px;
+              "
+              >📧</span
+            >
+            <a href="mailto:sudhanshukush321@gmail.com"
+              >sudhanshukush321@gmail.com</a
+            ></span
+          >
+        </div>
+        <div class="author"><h1>SUDHANSHU KUMAR</h1></div>
+        <div class="footerContent">
+          <p class="copyright">©️copyright</p>
+        </div>
+      </footer>
     </div>
 
     <!-- <div class="signup-form signup_hidden" >     
@@ -83,10 +127,9 @@
     <!-- <script src="./signup/signup.js"></script> -->
     <script src="../profileicon/profile.js"></script>
     <script src="../signout/signout.js"></script>
-      <!-- confetti  file imported -->
+    <!-- confetti  file imported -->
     <script src="../data/confetti-falling-animation/confetti.js"></script>
     <!--  Your web app's Firebase configuration -->
-    
 
     <!-- firebase intialization  -->
     <!-- <script type="module">
@@ -123,5 +166,36 @@
         signUpButton.addEventListener('click',userSignUp);
    </script> -->
 
-</body>
+    <!-- sugn out -->
+
+    <script type="module">
+      import { firebaseConfig } from "../firebase.config.js";
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+      import {
+        getAuth,
+        signOut,
+      } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      let signout = document.querySelector(".signout");
+
+      const logout = () => {
+        signOut(auth)
+          .then(() => {
+            alert("sign out");
+            window.location.replace("../index.html");
+          })
+          .catch((error) => {
+            alert(error.message);
+          });
+      };
+
+      signout.addEventListener("click", logout);
+    </script>
+  </body>
 </html>
