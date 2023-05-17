@@ -1,0 +1,98 @@
+.signup-form{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 47, 255, 0.432),rgb(174, 43, 226),rgba(0, 0, 255, 0.146))
+}
+/* .signup_hidden{
+    display: none;
+} */
+
+.form{
+    padding: 20px;
+    /* mix-blend-mode: difference; */
+    background: linear-gradient(rgba(0, 47, 255, 0.432),rgb(174, 43, 226),rgba(0, 0, 255, 0.146));
+    width: auto; 
+    border-radius: 10px;
+    box-shadow: 5px 5px 500px black;
+}
+
+.singup-heading{
+    text-align: center;
+    margin-bottom:0.5em ;
+    color: white;
+    text-shadow: 1px px 8px black;
+    border-bottom: 1px solid white;
+}
+.general{
+    padding: 6px;
+    margin: 10px;
+}
+label{
+    color:white ;
+    text-shadow: 1px 2px 8px black;
+}
+input{
+    border-radius: 2px;
+    outline: none;
+    text-align: center;
+    border: none;
+    box-shadow: inset 1px 1px 2px black;
+    color: white;
+    caret-color: black;
+    background-color: transparent;
+}
+input::placeholder{
+    color: wheat;
+}
+.male,.female{
+    margin: 10px 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.buttons{
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.button-signup{
+    padding: 5px 8px;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px black;
+    border:1px solid white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.button-signin{
+    padding: 5px 8px;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px black;
+    border:1px solid white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.button-signup:hover{
+    background-color: red;
+    font-size: 22px;
+}
+
+.button-signin:hover{
+    background-color: red;
+    font-size: 22px;
+}

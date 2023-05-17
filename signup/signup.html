@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./signup.css">
+    <title>sign up</title>
+</head>
+<body>
+    <div class="signup-form " >     
+        <div class="form">
+            <h2 class="singup-heading">Sing up</h2>
+            <label for="name" class="general name">Name: </label>
+            <input required type="text" class="general name userName" placeholder="full name" name="name"/><br/>
+            <label for="email" class="general email">Email: </label>
+            <input required type="email" class="general email userEmail" placeholder="abcd@gmail.com" name="email"/><br/>
+            <label for="password" class="general password">Password: </label>
+            <input required type="password" class="general password userPassword" placeholder="password" name="password"/><br/>
+            <label for="cnf-password" class="general cnf-password">Confirm password: </label>
+            <input required type="text" class="general cnf-password userCnrPassword" placeholder="Re-enter password" name="cnf-password"/><br/>
+            <label for="dob" class="general dob">DOB: </label>
+            <input required type="date"  name="dob" class="dob general"/><br/>
+            <label class="general gender">Gender: </label>
+            <label for="male" class="general male">Male</label>
+            <input required type="radio"  name="gender" class="male general"/>
+            <label for="female" class="general female">Female</label>
+            <input required type="radio"  name="gender" class="female general"/><br/>
+            <div class="buttons">
+                <button class="button-signup">Sign up</button>
+                <button class="button-signin" onclick="window.location.replace('../index.html')">Sign in</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- firebase intialization  -->
+    <script type="module">
+        import {firebaseConfig} from "../firebase.config.js";
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        import { getAuth,
+            createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        const userEmail = document.querySelector('.userEmail');
+        const userPassword = document.querySelector('.userPassword');
+        // const form = document.querySelector('.signup-form');
+        const signUpButton = document.querySelector('.button-signup');
+        
+        const userSignUp = () =>{
+            const signUpEmail = userEmail.value;
+            const signUpPassword = userPassword.value;
+            createUserWithEmailAndPassword(auth,signUpEmail,signUpPassword)
+            .then((userCredential) => {
+                // console.log(userCredential);
+                alert('Account created');
+                window.location.replace('../index.html');
+            })
+            .catch((error)=>alert(error.message));
+        }
+
+        signUpButton.addEventListener('click',userSignUp);
+   </script>
+</body>
+</html>
