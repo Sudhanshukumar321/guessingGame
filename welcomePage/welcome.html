@@ -101,7 +101,7 @@
         </div>
       </footer>
     </div>
-
+    <div class="alan-btn"></div>
     <!-- <div class="signup-form signup_hidden" >     
         <div class="form">
             <h2 class="singup-heading">Sing up</h2>
@@ -198,5 +198,31 @@
 
       signout.addEventListener("click", logout);
     </script>
+    //Alan ai
+    <script type="text/javascript"
+
+        src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+
+     <script>
+
+    var alanBtnInstance = alanBtn({
+
+    key: "890def764ac1cb64f609559f8bf12d872e956eca572e1d8b807a3e2338fdd0dc/stage",
+
+    onCommand: function (commandData) {
+
+      if (commandData.command === "go:back") {
+
+        //call client code that will react on the received command
+
+      }
+
+    },
+
+    rootEl: document.getElementById("alan-btn"),
+
+  });
+
+</script>
   </body>
 </html>
