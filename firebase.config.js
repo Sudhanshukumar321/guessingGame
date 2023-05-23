@@ -1,9 +1,9 @@
 // Your web app's Firebase configuration
 export const firebaseConfig = {
-  apiKey: "AIzaSyA5I5bzQhv84sLhj3jqpOKTkl0BzU-rcmk",
-  authDomain: "wordscramblinggame-f28b8.firebaseapp.com",
-  projectId: "wordscramblinggame-f28b8",
-  storageBucket: "wordscramblinggame-f28b8.appspot.com",
-  messagingSenderId: "640275556679",
-  appId: "1:640275556679:web:a3ed258297e30dc54d8462"
+ apiKey: "AIzaSyB9cRflGeMh_c8o2PlT9XzwHzIDZa4GM5Y",
+  authDomain: "wordscramblinggame-d846a.firebaseapp.com",
+  projectId: "wordscramblinggame-d846a",
+  storageBucket: "wordscramblinggame-d846a.appspot.com",
+  messagingSenderId: "281738208971",
+  appId: "1:281738208971:web:219cdee94bf4a1911b1d4e"
 };
